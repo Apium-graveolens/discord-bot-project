@@ -16,12 +16,6 @@ class google_search(commands.Cog):
             await ctx.send(embed= discord.Embed(title= result, url= result))
             sleep(0.5)
 
-    @app_commands.command(name = "search")
-    async def search2(self, interaction: discord.Integration, keyword: str):
-        result = search(keyword, stop= 1)
-        interaction.response.send_message("testing").send(embed= discord.Embed(title= result, url= result))
-
-
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(google_search(bot))
